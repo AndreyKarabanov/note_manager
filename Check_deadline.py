@@ -1,15 +1,15 @@
-from datetime import date
+from datetime import datetime, date
 
-mylist = []
+
 today = date.today()
-mylist.append(today.strftime("%d-%m-%Y"))
-print("Текущая дата:", mylist[0])  # Выводим текущую дату
+my_day = today.strftime("%d-%m-%Y")
+print("Текущая дата:", my_day)  # Выводим текущую дату
 
-from datetime import datetime
+
 while True:
     date2 = input("Введите дату дедлайна (в формате день-месяц-год): ") # Вводим дату окончания дедлайна
     try:
-        date1 = datetime.strptime(mylist[0], '%d-%m-%Y')
+        date1 = datetime.strptime(my_day, '%d-%m-%Y')
         date3 = datetime.strptime(date2, '%d-%m-%Y') # Проверяем в правильном ли формате осуществился ввод
         break
     except ValueError:(
