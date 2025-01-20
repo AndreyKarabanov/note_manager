@@ -10,12 +10,17 @@ for user in list_[:]:
     print(user)
 # При вводе любого имени или заголовка удаляет словарь и выводит оставшиеся
 user_input = input("Введите имя пользователя или заголовок для удаления заметки: ")
+
 for i, book in enumerate(list_):
     if book["Имя"] == user_input:
         del list_[i]
-for i, book in enumerate(list_):
+        print("Успешно удалено. Остались следующие заметки:")
     if book["Заголовок"] == user_input:
         del list_[i]
-print("Успешно удалено. Остались следующие заметки:")
+        print("Успешно удалено. Остались следующие заметки:")
+else:
+    print("Такого заголовка нет. Ваши заголовки:")
+
+
 for user in list_[:]:
     print(user)
