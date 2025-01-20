@@ -12,15 +12,16 @@ for user in list_[:]:
 user_input = input("Введите имя пользователя или заголовок для удаления заметки: ")
 
 for i, book in enumerate(list_):
-    if book["Имя"] == user_input:
-        del list_[i]
-        print("Успешно удалено. Остались следующие заметки:")
-    if book["Заголовок"] == user_input:
-        del list_[i]
-        print("Успешно удалено. Остались следующие заметки:")
-else:
-    print("Такого заголовка нет. Ваши заголовки:")
 
+    if book["Имя"].lower() == user_input.lower():
+        del list_[i]
+        print("Успешно удалено. Остались следующие заметки:")
+        break
+    if book["Заголовок"].lower() == user_input.lower():
+        del list_[i]
+        print("Успешно удалено. Остались следующие заметки:")
+        break
+else: print("Такого заголовка нет. Ваши заголовки:")
 
 for user in list_[:]:
     print(user)
